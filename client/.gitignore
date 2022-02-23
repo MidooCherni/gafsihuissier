@@ -2,10 +2,7 @@
 
 # dependencies
 /node_modules
-/client/node_modules
-/server/node_modules
 /.pnp
-/server/key.js
 .pnp.js
 
 # testing
