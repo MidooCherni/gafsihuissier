@@ -3,29 +3,6 @@ import React from 'react'
 const Home = () =>{
     return(
 <div>
-  <div className="menu-wrap">
-    <div className="menu">
-      <ul>
-        <li><a href="public/index.html" className="active">home</a></li>
-        <li><a href="public/about.html">about</a></li>
-        <li><a href="public/contact.html">Contact</a></li>
-        <li><a href="public/login.html">Connexion</a></li>
-        <li><a href="public/register.html">Inscription</a></li>
-      </ul>
-    </div>
-  </div>
-  {/*------menu wrap ends-------*/}
-  <div className="clearing" />
-  <div className="header">
-    <div className="logo">
-      <h1>tuni<span>Huissier</span></h1>
-    </div>
-    <div className="social">
-      <ul>
-        <li>Horaires de Travail:   8h00 - 18h00 sauf Weekends</li>
-      </ul>
-    </div>
-  </div>
   {/*------header wrap ends-------*/}
   <div className="banner">
     <h1>Maître GAFSI Saida </h1>
@@ -42,7 +19,6 @@ const Home = () =>{
           <div className="content">
             <h2>Proin nunc ante, tempus ac porta blandit. </h2>
             <p> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</p>
-            <div className="button mar-top20"><a href="#">More INfo</a></div>
           </div>
         </div>
       </div>
@@ -56,7 +32,6 @@ const Home = () =>{
             <p>Trices lacinia sem interdum vitae. Suspendisse a urna id nulla hendrerit porttitor ultrices in odio. Vivamus varius, arcu id vestibulum sagittis, lorem</p>
             <h2>Nam iaculis fermentum </h2>
             <p>Trices lacinia sem interdum vitae. Suspendisse a urna id nulla hendrerit porttitor ultrices in odio. </p>
-            <div className="button"><a href="#">more info</a></div>
           </div>
         </div>
       </div>
@@ -70,7 +45,6 @@ const Home = () =>{
             <p>Trices lacinia sem interdum vitae. Suspendisse a urna id nulla hendrerit porttitor ultrices in odio. Vivamus varius, arcu id vestibulum sagittis, lorem</p>
             <h2>Nam iaculis fermentum </h2>
             <p>Trices lacinia sem interdum vitae. Suspendisse a urna id nulla hendrerit porttitor ultrices in odio. </p>
-            <div className="button"><a href="#">more info</a></div>
           </div>
         </div>
       </div>
@@ -84,11 +58,11 @@ const Home = () =>{
         </div>
         <div className="content">
           <ul>
-            <li><a href="#">In ut leo eu mi rutrum pellentesque</a></li>
-            <li><a href="#">Maecenas consequat eleifend ligula</a></li>
-            <li><a href="#">Aenean nec ipsum turpis id vestibulum</a></li>
-            <li><a href="#">Proin at mauris at odio vulputate accu</a></li>
-            <li className="-no-border-bottom"><a href="#">Mauris condimentum cursus tortor sit</a></li>
+            <li>In ut leo eu mi rutrum pellentesque</li>
+            <li>Maecenas consequat eleifend ligula</li>
+            <li>Aenean nec ipsum turpis id vestibulum</li>
+            <li>Proin at mauris at odio vulputate accu</li>
+            <li className="-no-border-bottom">Mauris condimentum cursus tortor sit</li>
           </ul>
         </div>
       </div>

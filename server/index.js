@@ -8,7 +8,8 @@ const PORT=5000
 require("./models/user.js")
 
 app.use(express.json())
-app.use(require('./routes/auth.js'))
+app.use(require('./routes/signin.js'))
+app.use(require('./routes/signup.js'))
 
 mongoose.connect(MONGOURL,{
     useNewUrlParser:true,
@@ -21,11 +22,6 @@ mongoose.connection.on("connected",()=>{
 
 mongoose.connection.on("error",()=>{
     console.log("ERROR: Could not connect to MongoDB cluster")
-})
-
-app.get('/',(req,res)=>{
-    res.send("hello world")
-    console.log("hi nigga!")
 })
 
 app.listen(PORT,()=>{

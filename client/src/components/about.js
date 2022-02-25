@@ -1,47 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>GAFSI Saida - Huissier de justice</title>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div class="menu-wrap">
-  <div class="menu">
-    <ul>
-      <li><a href="index.html" >home</a></li>
-      <li><a href="about.html" class="active">about</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="login.html">Connexion</a></li>
-      <li><a href="register.html">Inscription</a></li>
-    </ul>
-  </div>
-</div>
-<!--------menu wrap ends--------->
-<div class="clearing"></div>
-<div class="header">
-  <div class="logo">
-    <h1>tuni<span>Huissier</span></h1>
-  </div>
-  <div class="social">
-    <ul>
-      <li>Horaires de Travail:   8h00 - 18h00 sauf Weekends</li>
-    </ul>
-  </div>
-</div>
-<!--------header wrap ends--------->
-<div class="page">
-  <div class="primary-col">
-    <div class="generic">
-      <div class="panel">
-        <div class="title">
+import React from 'react'
+
+const About = () =>{
+    return(
+<div className="page">
+  <div className="primary-col">
+    <div className="generic">
+      <div className="panel">
+        <div className="title">
           <h1>About</h1>
         </div>
-        <div class="content">
+        <div className="content">
           <h2>Proin nunc ante, tempus ac porta blandit. </h2>
-          <P> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</P>
+          <p> Ut mollis blandit mi, vel ultricies arcu iaculis in. Vestibulum pellentesque volutpat sem quis mattis. Morbi egestas suscipit sem ut lacinia. Morbi interdum, orci et lacinia lacinia, nibh sapien blandit leo, a ornare lectus nulla in urna mauris, quis hendrerit mi hendrerit quis. Lorem ipsu.</p>
           <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
           <p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
           <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu. Ut scelerisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante. Vivamus imperdiet nibh feugiat est.</p>
@@ -53,27 +23,29 @@
       </div>
     </div>
   </div>
-  <!----primary end--->
-  <div class="side-bar">
-    <div class="clearing"></div>
-    <div class="panel">
-      <div class="title"> <span><img src="images/icon1.jpg" alt="icon" /></span>
+  {/*--primary end-*/}
+  <div className="side-bar">
+    <div className="clearing" />
+    <div className="panel">
+      <div className="title"> <span><img src="images/icon1.jpg" alt="icon" /></span>
         <h1>Morbi sed dignissim</h1>
       </div>
-      <div class="content">
+      <div className="content">
         <ul>
           <li><a href="#">In ut leo eu mi rutrum pellentesque</a></li>
           <li><a href="#">Maecenas consequat eleifend ligula</a></li>
           <li><a href="#">Aenean nec ipsum turpis id vestibulum</a></li>
           <li><a href="#">Proin at mauris at odio vulputate accu</a></li>
-          <li class="-no-border-bottom"><a href="#">Mauris condimentum cursus tortor sit</a></li>
+          <li className="-no-border-bottom"><a href="#">Mauris condimentum cursus tortor sit</a></li>
         </ul>
       </div>
     </div>
-    <div class="clearing"></div>
+    <div className="clearing" />
   </div>
-  <!---side-bar-end--->
+  {/*-side-bar-end-*/}
 </div>
-<!---page-end--->
-</body>
-</html>
+
+    )
+}
+
+export default About;

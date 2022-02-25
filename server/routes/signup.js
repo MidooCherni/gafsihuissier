@@ -4,7 +4,8 @@ const mongoose = require('mongoose')
 const User = mongoose.model("User")
 
 router.get("/signup", (req, res)=>{
-    res.send("PENIS");
+    console.log(req)
+    res.send("DONE")
 })
 
 module.exports = router
