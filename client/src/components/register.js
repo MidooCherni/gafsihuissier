@@ -1,7 +1,8 @@
+/* eslint-disable */
+
 import React, { useState } from 'react'
 
 async function tryRegister(creds){
-  console.log('sending credentials: ', creds)
   return fetch('http://localhost:5000/signup', {
     method: 'POST',
     headers:{'Content-Type': 'application/json'},
@@ -9,11 +10,11 @@ async function tryRegister(creds){
   }).then(data => data.json())
 }
 
-const Register = () =>{
+function Register(){
   const [name, setname] = useState()
   const [mail, setmail] = useState()
-  const [cin, setcin] = useState()
-  const [tel, settel] = useState()
+  const [cin , setcin] = useState()
+  const [tel , settel] = useState()
   const [pass, setpass] = useState()
   const [pass2, setpass2] = useState()
   const [addr, setaddr] = useState()
@@ -23,8 +24,35 @@ const Register = () =>{
   const handleSubmit = async e => {
     e.preventDefault()
     const status = (await tryRegister({name, mail, cin, tel, pass, pass2, addr}))
-    setstatus(status)
-    console.log('received status ', status)
+    switch(status.status){
+      case "EMPTY":
+        alert("ERREUR: Tous les champs sont obligatoires.")
+        break
+      case "MAILERR":
+        alert("ERREUR: Addresse mail invalide.")
+        break
+      case "PASSERR":
+        alert("ERREUR: Les champs de mot de passe doivent êtres identiques.")
+        break
+      case "TELERR":
+        alert("ERREUR: Numéro de téléphone invalide.")
+        break
+      case "CINERR":
+        alert("ERREUR: CIN ou code invalide.")
+        break
+      case "ERRFIND":
+        alert("Erreur de base de donnée. Veuillez contacter l'admin.")
+        break
+      case "EXISTS":
+        alert("ERREUR: Utilisateur avec ce CIN existe déja.")
+        break
+      case "MRIGEL":
+        alert("Compte crée avec success. Veuillez vous connecter.")
+        break
+      default:
+        alert("wtf")
+        return
+    }
   }
 
     return(
@@ -62,7 +90,7 @@ const Register = () =>{
               <textarea className="message" name="address" id="address" defaultValue={""} onChange={e => setaddr(e.target.value)}/>
             </label>
             <div>
-              <button type="submit" className="button">Inscription</button>
+              <input type="submit" className="button" value="Inscription" />
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>

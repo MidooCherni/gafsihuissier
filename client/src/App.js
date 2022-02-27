@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,15 +15,18 @@ import Logoff from "./components/logoff"
 
 const App = () => {
     const [token, setToken] = useState()
+    if(sessionStorage.length > 0){
+        setToken(sessionStorage.getItem('token'))
+    }
 
     return(
         <Router>
-            <Navbar/>
+            <Navbar token={token}/>
             <Routes>
                 <Route exact path='/' element={<Home/>} />
                 <Route exact path='/about' element={<About/>} />
                 <Route exact path='/contact' element={<Contact/>} />
-                <Route exact path='/login' element={<Login/>} />
+                <Route exact path='/login' element={<Login setToken={setToken}/>} />
                 <Route exact path='/register' element={<Register/>} />
                 <Route exact path='/profile' element={<Profile/>} />
                 <Route exact path='/logoff' element={<Logoff/>} />

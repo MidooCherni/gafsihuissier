@@ -1,9 +1,8 @@
-import React from 'react'
-
 const Logoff = ({token}) =>{
-    return(
-      <div></div>
-    )
+  sessionStorage.clear()
+  token = "-1"
+  window.location.href = 'http://localhost:3000/'
+  return null
 }
 
 export default Logoff;

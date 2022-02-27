@@ -9,7 +9,7 @@ const Contact = () =>{
           <h1>Contact</h1>
         </div>
         <div className="content">
-          <h2>Si vous voulez un rendez-vous sans avoir à vous insrire, veuillez remplir ce formulaire.</h2>
+          <h2>Si vous voulez un rendez-vous sans avoir à vous inscrire, veuillez remplir ce formulaire.</h2>
           <form>
             <div className="contact-form mar-top30">
               <label> <span>Nom et Prénom</span>

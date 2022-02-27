@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 
 async function loginUser(credentials){
   return fetch('http://localhost:5000/signin', {
@@ -16,7 +15,12 @@ const Login = ({ setToken }) =>{
   const handleSubmit = async e => {
     e.preventDefault()
     const token = await loginUser({mailcin, pass})
-    setToken(token)
+    if(token.status === "NOTFOUND"){
+      alert("ERREUR: Ce compte n'existe pas.")
+    } else {
+      setToken(token)
+      sessionStorage.setItem('token', JSON.stringify(token));
+    }
   }
 
   return(
@@ -45,10 +49,6 @@ const Login = ({ setToken }) =>{
     </div>
   </div>
   )
-}
-
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
 }
 
 export default Login;

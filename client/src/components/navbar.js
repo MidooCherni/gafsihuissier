@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const SecondHalf = ({token}) =>{
-  if(!token){
+  if(!token || token === "-1"){
     return(<div>
       <li><Link to="/login">Connexion</Link></li>
       <li><Link to="/register">Inscription</Link></li>
@@ -24,7 +24,7 @@ const Navbar = ({token}) => {
           <li><Link to="/">Accueil</Link></li>
           <li><Link to="/about">à propos</Link></li>
           <li><Link to="/contact">Contact</Link></li>
-          <SecondHalf/>
+          <SecondHalf token={token}/>
         </ul>
       </div>
         </div>
