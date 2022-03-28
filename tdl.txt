@@ -1,0 +1,12 @@
+WHAT TO ADD TO THE WEBSITE:
+
+
+check if user case has scheddate, say so
+message feature /message 
+/message will render all case messages on refresh
+admin panel
+    will list every case each having a /case?id={x}
+        that will list messages
+        allow reply
+        and allow setting a scheddate
+fill in text
