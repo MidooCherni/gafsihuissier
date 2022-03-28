@@ -1,7 +1,7 @@
 const Logoff = ({token}) =>{
-  sessionStorage.clear()
+  localStorage.clear()
   token = "-1"
-  window.location.href = 'http://localhost:3000/'
+  window.location.href = '/'
   return null
 }
 

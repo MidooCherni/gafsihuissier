@@ -18,8 +18,6 @@ function Register(){
   const [pass, setpass] = useState()
   const [pass2, setpass2] = useState()
   const [addr, setaddr] = useState()
-  
-  const [status, setstatus] = useState()
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -53,6 +51,7 @@ function Register(){
         alert("wtf")
         return
     }
+    window.location.href = '/'
   }
 
     return(

@@ -8,19 +8,23 @@ async function loginUser(credentials){
   }).then(data => data.json())
 }
 
-const Login = ({ setToken }) =>{
+const Login = () =>{
   const [mailcin, setmailcin] = useState()
   const [pass, setpass] = useState() 
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const token = await loginUser({mailcin, pass})
-    if(token.status === "NOTFOUND"){
-      alert("ERREUR: Ce compte n'existe pas.")
+    if(mailcin==="ADMINACCOUNT" && pass==="GAFSIHUISSIER"){      // ADMIN COORDS
+      localStorage.setItem('token', 'ADMIN');
     } else {
-      setToken(token)
-      sessionStorage.setItem('token', JSON.stringify(token));
+      const token = await loginUser({mailcin, pass})
+      if(token.status === "NOTFOUND"){
+        alert("ERREUR: Ce compte n'existe pas.")
+      } else {
+        localStorage.setItem('token', JSON.stringify(token));
+      }
     }
+    window.location.href = '/'
   }
 
   return(

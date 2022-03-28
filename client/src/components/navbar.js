@@ -1,21 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const SecondHalf = ({token}) =>{
-  if(!token || token === "-1"){
-    return(<div>
-      <li><Link to="/login">Connexion</Link></li>
-      <li><Link to="/register">Inscription</Link></li>
-    </div>)
+const SecondHalf = () =>{
+  if(localStorage.getItem('token')){
+    if(localStorage.getItem('token') === "ADMIN"){
+      return(<div>
+        <li><Link to="/admin">Admin</Link></li>
+        <li><Link to="/logoff">Déconnexion</Link></li>
+      </div>)
+    } else {
+      return(<div>
+        <li><Link to="/profile">Profile</Link></li>
+        <li><Link to="/logoff">Déconnexion</Link></li>
+      </div>)
+    }
   } else {
     return(<div>
-      <li><Link to="/profile">Profile</Link></li>
-      <li><Link to="/logoff">Déconnexion</Link></li>
+      <li><Link to="/contact">Contact</Link></li>
+      <li><Link to="/login">Connexion</Link></li>
+      <li><Link to="/register">Inscription</Link></li>
     </div>)
   }
 }
 
-const Navbar = ({token}) => {
+const Navbar = () => {
   return( 
     <div>
       <div className="menu-wrap">
@@ -23,8 +31,7 @@ const Navbar = ({token}) => {
         <ul>
           <li><Link to="/">Accueil</Link></li>
           <li><Link to="/about">à propos</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <SecondHalf token={token}/>
+          <SecondHalf />
         </ul>
       </div>
         </div>
